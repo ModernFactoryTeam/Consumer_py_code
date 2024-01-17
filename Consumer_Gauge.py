@@ -7,7 +7,7 @@ consumer = KafkaConsumer('Gauge_Topic',
                         #  group_id='testgroup',
                          bootstrap_servers=['15.164.226.233:9092'])
 
-redis_client = redis.StrictRedis(host='52.78.31.128', port=31724, db=0)
+redis_client = redis.StrictRedis(host='54.180.141.165', port=31724, db=0)
 
 for message in consumer:
 # Kafka 메시지 출력

@@ -3,7 +3,7 @@ import random
 from kafka import KafkaProducer
 
 # Kafka 클러스터의 호스트 및 포트 정보를 설정합니다.
-bootstrap_servers = ['15.164.226.233:9092']
+bootstrap_servers = ['3.37.127.75:9092']
 
 # 토픽 이름을 설정합니다.
 topicName = 'Gauge_Topic'
@@ -29,6 +29,6 @@ send_message(create_message())
 
 # 10초마다 메시지를 보냅니다.
 while True:
-    time.sleep(10)
+    time.sleep(5)
     send_message(create_message())
 

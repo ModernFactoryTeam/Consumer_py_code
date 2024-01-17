@@ -5,7 +5,7 @@ import redis
 
 consumer = KafkaConsumer('Agv_Topic',
                         #  group_id='testgroup',
-                         bootstrap_servers=['15.164.226.233:9092'])
+                         bootstrap_servers=['3.37.127.75:9092'])
 
 redis_client = redis.StrictRedis(host='54.180.141.165', port=31724, db=0)
 
@@ -115,6 +115,7 @@ for message in consumer:
         redis_value = json.dumps(value) 
         
     # 레디스에 저장
+    print(redis_key) 
     print(redis_value)
     redis_client.set(redis_key, redis_value)    
 

@@ -3,7 +3,7 @@ import json
 from kafka import KafkaProducer
 
 # Kafka 클러스터의 호스트 및 포트 정보를 설정합니다.
-bootstrap_servers = ['15.164.226.233:9092']
+bootstrap_servers = ['3.37.127.75:9092']
 
 # 토픽 이름을 설정합니다.
 topicName = 'Agv_Topic'

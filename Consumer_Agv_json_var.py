@@ -51,7 +51,7 @@ for message in consumer:
                 "status": "RUN",
                 "bat_lv": 82,
                 "agv_type": "QR",
-                "x_pos": 2.354622,
+                "x_pos": 0,
                 "y_pos": 0,
                 "z_pos": 0,
                 "area": "A_FL2",
@@ -73,7 +73,7 @@ for message in consumer:
                 "status": "RUN",
                 "bat_lv": 90,
                 "agv_type": "QR",
-                "x_pos": 125.795056,
+                "x_pos": 0,
                 "y_pos": 0,
                 "z_pos": 0,
                 "area": "A_FL2",
@@ -98,15 +98,15 @@ for message in consumer:
             agv_entry["x_pos"] = int(Q001_xpos)
             agv_entry["y_pos"] = int(Q001_ypos)
             # 최종 값이 범위를 벗어나지 않도록 제한
-            agv_entry["x_pos"] = min(506, max(486, agv_entry["x_pos"]))
-            agv_entry["y_pos"] = min(748, max(708, agv_entry["y_pos"]))
+            agv_entry["x_pos"] = min(44, max(37, agv_entry["x_pos"]))
+            agv_entry["y_pos"] = min(-81, max(-108, agv_entry["y_pos"]))
 
         if agv_entry.get("agv_id") == "230615_Q002":    
             agv_entry["x_pos"] = int(Q002_xpos)
             agv_entry["y_pos"] = int(Q002_ypos)
             # 최종 값이 범위를 벗어나지 않도록 제한
-            agv_entry["x_pos"] = min(520, max(486, agv_entry["x_pos"]))
-            agv_entry["y_pos"] = min(648, max(630, agv_entry["y_pos"]))
+            agv_entry["x_pos"] = min(69, max(44, agv_entry["x_pos"]))
+            agv_entry["y_pos"] = min(-114, max(-120, agv_entry["y_pos"]))
 
 
     # JSON 데이터 파싱하여 레디스 키와 값을 저장

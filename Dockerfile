@@ -4,4 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
-CMD ["python", "app.py"]
+RUN pip install kafka-python
+
+
+CMD ["python", "Consumer_Agv_json_var.py"]

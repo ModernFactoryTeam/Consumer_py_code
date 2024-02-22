@@ -36,9 +36,27 @@ def create_message():
     else:
         burden_type = default_burden_type
     
-    agv_WP = {
+    agv_Line1_Agv1 = {
         "WPCode": f"Line1_WP ({current_wp_number})",
         "AGVName": "Line1_AGV_01",
+        "BurdenType": burden_type
+    }
+    
+    agv_Line1_Agv2 = {
+        "WPCode": f"Line1_WP ({current_wp_number})",
+        "AGVName": "Line1_AGV_02",
+        "BurdenType": burden_type
+    }
+    
+    agv_Line2_Agv3 = {
+        "WPCode": f"Line2_WP ({current_wp_number})",
+        "AGVName": "Line2_AGV_03",
+        "BurdenType": burden_type
+    }
+    
+    agv_Line2_Agv4 = {
+        "WPCode": f"Line2_WP ({current_wp_number})",
+        "AGVName": "Line2_AGV_04",
         "BurdenType": burden_type
     }
     
@@ -46,7 +64,7 @@ def create_message():
     cycle_index = (cycle_index + 1) % len(wp_sequence)
     
     # 전체 키 'agv' 생성
-    message = {'agv': agv_WP}
+    message = {'agv': [agv_Line1_Agv1, agv_Line1_Agv2, agv_Line2_Agv3, agv_Line2_Agv4]}
     
     message_2 = json.dumps(message)
     

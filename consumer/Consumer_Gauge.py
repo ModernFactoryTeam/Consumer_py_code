@@ -7,7 +7,7 @@ consumer = KafkaConsumer('Gauge_Topic',
                          group_id='gauge_group',
                          bootstrap_servers=['3.39.52.237:9092'])
 
-redis_client = redis.StrictRedis(host='54.180.141.165', port=31724, db=0)
+redis_client = redis.StrictRedis(host='54.180.47.133', port=32535, db=0)
 
 for message in consumer:
 # Kafka 메시지 출력
@@ -26,7 +26,7 @@ for message in consumer:
         #json data setting
         json_set_data = """
         {
-            "guage": { "shift": "1", 
+            "gauge": { "shift": "1", 
                      "plan_qty": 70344, 
                      "acrs_qty": 42112, 
                      "target_qty": 41200, 

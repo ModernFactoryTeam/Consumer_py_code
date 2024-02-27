@@ -7,7 +7,7 @@ consumer = KafkaConsumer('Agv_Topic',
                          group_id='agv_group',
                          bootstrap_servers=['3.39.52.237:9092'])
 
-redis_client = redis.StrictRedis(host='54.180.141.165', port=31724, db=0)
+redis_client = redis.StrictRedis(host='54.180.47.133', port=32535, db=0)
 
 for message in consumer:
     # JSON 디코딩

@@ -11,4 +11,4 @@ RUN /bin/bash -c "source /app/venv/bin/activate"
 RUN pip install kafka-python redis
 
 
-CMD ["python", "Producer_Agv_json_var.py"]
+CMD ["python", "Producer_agv_wp_sequence.py"]

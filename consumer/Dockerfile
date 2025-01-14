@@ -11,4 +11,4 @@ RUN /bin/bash -c "source /app/venv/bin/activate"
 RUN pip install kafka-python redis
 
 
-CMD ["python", "Consumer_temp.py"]
+CMD ["python", "Consumer_agv_wp_seq.py"]

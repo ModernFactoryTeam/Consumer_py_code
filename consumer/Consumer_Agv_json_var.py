@@ -4,7 +4,7 @@ import redis
 
 
 consumer = KafkaConsumer('Agv_Topic',
-                        #  group_id='agv_group', // 2025.01.14 김석진 - 확인 필요
+                         group_id='agv_group',
                          bootstrap_servers=['3.39.52.237:9092'])
 
 redis_client = redis.StrictRedis(host='54.180.47.133', port=32535, db=0) # 2025.01.14 김석진 - host 및 port 변경 54.180.141.165:31724 -> 54.180.47.133:32535
